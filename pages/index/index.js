@@ -7,17 +7,20 @@ const caseList = [
   },
   {
     caseName: "动画",
-    page: "/pages/luckyDraw/index"
+    page: "/pages/animation/index"
 
   },
   {
     caseName: "调查问卷",
-    page: "/pages/luckyDraw/index"
+    page: "/pages/questionnaire/index"
   },
 ]
 Page({
   data: {
-    caseList
+    caseList,
+    obj: {
+      name: "123"
+    }
   },
   onLoad() {},
   handleJumpPage(e) {

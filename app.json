@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/luckyDraw/index"
+    "pages/luckyDraw/index",
+    "pages/animation/index",
+    "pages/questionnaire/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
