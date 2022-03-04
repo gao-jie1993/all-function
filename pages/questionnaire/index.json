@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "调查问卷",
-  "usingComponents": {}
+  "usingComponents": {
+    "questionBank": "../../components/questionBank/questionBank"
+  }
 }

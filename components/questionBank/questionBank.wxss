@@ -1,0 +1,133 @@
+/* components/questionnaire/index.wxss */
+.conent {
+  background-color: #fff;
+  width: 670rpx;
+  margin-bottom: 120rpx;
+}
+
+.wrapper {
+  margin-bottom: 60rpx;
+  display: flex;
+}
+
+.wrapper-index {
+  font-size: 28rpx;
+  margin-right: 25rpx;
+}
+
+.wrapper-title {
+  font-size: 28rpx;
+}
+
+.wrapper-title-activity {
+  color: #a8112e;
+}
+
+.wrapper-group-activity {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  display: inline-block;
+  margin: 30rpx 150rpx 0 0;
+
+}
+
+.wrapper-group-label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+}
+
+.wrapper-group-select {
+  display: flex;
+  align-items: center;
+}
+
+.select-text {
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+
+.radio-group-text {
+  margin-right: 15rpx;
+}
+
+.textarea {
+  width: 550rpx;
+  border-bottom: 2rpx solid #030303 ;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+}
+
+.textarea-activity {
+  width: 550rpx;
+  border-bottom: 2rpx solid #ccc;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #868383;
+}
+
+.textarea-hidden {
+  display: none;
+}
+
+.placeholder-textarea {
+  font-size: 24rpx;
+}
+
+.button {
+  width: 380rpx;
+  height: 96rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  text-align: center;
+  line-height: 96rpx;
+  background-color: #A8112E;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 100rpx;
+}
+
+/* 修改radio、checkout自带样示 */
+radio .wx-radio-input{
+  border-radius: 0;/* 圆角 */
+  width: 32rpx;
+  height: 32rpx;
+}
+
+radio .wx-radio-input.wx-radio-input-checked{
+  border: 1px solid #A8112E;
+  background: #fff;
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before{
+  border-radius: 0;
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  font-size:24rpx;
+  color:#A8112E;
+  background: #A8112E;
+}
+checkbox .wx-checkbox-input{
+  border-radius: 0;/* 圆角 */
+  width: 32rpx;
+  height: 32rpx;
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border: 1px solid #A8112E;
+  background: #fff;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 0;
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  font-size:24rpx;
+  color:#A8112E;
+  background: #A8112E;
+}

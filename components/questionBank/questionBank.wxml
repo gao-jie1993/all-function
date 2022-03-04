@@ -1,0 +1,35 @@
+<!--components/questionnaire/index.wxml-->
+<view class="conent">
+  <view class="wrapper" wx:for="{{querstList}}" wx:key="index">
+    <view class="wrapper-index">{{index+1}}.</view>
+    <view class="wrapper-box">
+      <view class="wrapper-title {{item.style ? 'wrapper-title-activity' : ''}}">{{item.title}}</view>
+      <!-- 单选 -->
+      <radio-group wx:if="{{item.type === 'radio'}}" class="wrapper-group" data-itemIndex="{{index}}" data-name="{{item.name}}"
+        bindchange="selectChange">
+          <label class="{{item.options.length === 2 ? 'wrapper-group-activity' : 'wrapper-group-label'}}"
+          wx:for="{{item.options}}" wx:for-item="items" data-type="radio" data-index="{{index}}" wx:key="value" catch:tap="{{!items.checked ? 'checkChange' : ''}}">
+            <view class="wrapper-group-select">
+              <radio value="{{items.text}}" />
+              <text class="select-text">{{items.text}}</text>
+            </view>
+        </label>
+      </radio-group>
+      <!-- 多选 -->
+      <checkbox-group wx:else class="wrapper-group" data-itemIndex="{{index}}" data-name="{{item.name}}"
+        bindchange="selectChange">
+        <label class="{{item.options.length === 2 ? 'wrapper-group-activity' : 'wrapper-group-label'}}"
+          wx:for="{{item.options}}" wx:for-item="items" data-type="check" data-index="{{index}}" wx:key="value" catch:tap="{{!items.canCheck ? 'checkChange' : ''}}">
+          <view class="wrapper-group-select">
+            <checkbox value="{{items.text}}" checked="{{items.checked}}" disabled="{{items.canCheck}}"  />
+            <text class="select-text">{{items.text}}</text>
+          </view>
+        </label>
+      </checkbox-group>
+      <!-- 输入框 -->
+      <textarea class="{{item.hasInput ? '' : 'textarea-hidden'}} {{quizMap[index] ? 'textarea' : 'textarea-activity'}}" value="{{item.inputValue}}" disabled="{{!quizMap[index]}}" data-itemIndex="{{index}}" data-name="{{item.name}}" bindinput="bindTextAreaBlur" maxlength="40" auto-height placeholder="文字限制40字以内" placeholder-class="placeholder-textarea" />
+    </view>
+  </view>
+</view>
+<!-- 提交按钮 -->
+<view class="button" bind:tap="handleSubmit">提交问卷</view>
